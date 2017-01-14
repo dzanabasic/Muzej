@@ -1,22 +1,23 @@
 package com.example.dana.muzej;
+
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Telephony;
-import android.support.design.widget.Snackbar;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.Toast;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity
         RateFragment.OnFragmentInteractionListener
 
 {
+    Locale myLocale;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +43,6 @@ public class MainActivity extends AppCompatActivity
         HomeFragment homeFragment=new HomeFragment();
         fragmentTransaction.add(R.id.fragment_container,homeFragment);
         fragmentTransaction.commit();
-
-
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -58,9 +59,27 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-
         DBHelper myDb=new DBHelper(this);
     }
+
+
+
+    private void setLocal(String language){
+
+        myLocale = new Locale(language);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
+//MainActivity.class
+
+    }
+
+
 
     @Override
     public void onBackPressed() {

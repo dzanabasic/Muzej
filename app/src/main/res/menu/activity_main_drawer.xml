@@ -5,41 +5,41 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@android:drawable/ic_menu_info_details"
-            android:title="Home" />
+            android:title="@string/home" />
 
         <item
             android:id="@+id/nav_about"
             android:icon="@android:drawable/ic_menu_info_details"
-            android:title="About Museum" />
+            android:title="@string/about" />
         <item
             android:id="@+id/nav_info"
             android:icon="@android:drawable/ic_menu_info_details"
-            android:title="Info" />
+            android:title="@string/info" />
 
         <item
             android:id="@+id/nav_news"
             android:icon="@android:drawable/ic_menu_help"
-            android:title="What's New?" />
+            android:title="@string/wnew" />
         <item
             android:id="@+id/nav_nearby"
             android:icon="@android:drawable/ic_menu_mylocation"
-            android:title="Nearby Places" />
+            android:title="@string/near" />
         <item
             android:id="@+id/nav_photocontest"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Photo Contest" />
+            android:title="@string/contest" />
     </group>
 
-    <item android:title="Like the Museum?">
+    <item android:title="@string/like">
         <menu>
             <item
                 android:id="@+id/nav_rate"
                 android:icon="@android:drawable/btn_star_big_on"
-                android:title="Rate Us" />
+                android:title="@string/rate" />
             <item
                 android:id="@+id/nav_support"
                 android:icon="@android:drawable/ic_menu_more"
-                android:title="Support Museum" />
+                android:title="@string/support" />
         </menu>
     </item>
 

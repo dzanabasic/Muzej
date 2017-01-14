@@ -127,45 +127,6 @@
 
     <!-- END STRINGS FOR FRAGMENT_SUPPORT_US -->
 
-    <!-- STRINGS FOR FRAGMENT_NEARBY -->
-
-    <string name="naslov">Must sees</string>
-    <string-array name="place_names">
-        <item>Sebilj</item>
-        <item>Sarajevo National Theater</item>
-        <item>National Museum of Bosnia and Herzegovina</item>
-        <item>The White Fortress</item>
-        <item>Sacred Heart Cathedral</item>
-        <item>Gazi Husrev-bey Mosque</item>
-        <item>Sarajevo City Hall</item>
-
-    </string-array>
-
-    <string-array name="streets">
-        <item>Bascarsija</item>
-        <item>Obala Kulina bana 9</item>
-        <item>Zmaja od Bosne 3</item>
-        <item>Sarajevo</item>
-        <item>Sacred Heart Cathedral</item>
-        <item>Gazi Husrev-bey Mosque</item>
-        <item>Sarajevo City Hall</item>
-
-    </string-array>
-
-    <array name="place_pics">
-        <item>@drawable/sebilj_nearby</item>
-        <item>@drawable/theater_nearby</item>
-        <item>@drawable/muzej_nearby</item>
-        <item>@drawable/bijelatabija_nearby</item>
-        <item>@drawable/dzamija_nearby</item>
-        <item>@drawable/vijecnica_nearby</item>
-    </array>
-
-    <!-- END STRINGS FOR FRAGMENT_NEARBY -->
-
-    <!-- STRINGS FOR FRAGMENT_RATE -->
-
-
     <!-- STRINGS FOR FRAGMENT_RATE -->
 
     <string name="rate1">Your rate leads us to improvement!</string>
@@ -173,11 +134,38 @@
     <string name="ratebutton">Done</string>
     <string name="rate3">By clicking button you submit your rate</string>
 
-
     <!-- END STRINGS FOR FRAGMENT_RATE -->
 
 
     <string name="title_activity_maps">Map</string>
+
+
+    <!-- STRINGS FOR FRAGMENT_NEARBY -->
+
+    <string name="naslov">Must sees</string>
+    <string name="txt1">National Museum\nZmaja od Bosne 3</string>
+    <string name="txt2">National Thatre\nObala Kulina bana 9</string>
+    <string name="txt3">Vijecnica\nObala Kulina bana</string>
+    <string name="txt4">Sebilj\nBaščaršija</string>
+    <string name="txt5">Gazi Husrev-beg Mosque\nSarači 8</string>
+    <string name="txt6">The White Fortress</string>
+    <string name="bos">Bosnian</string>
+
+    <!-- END STRINGS FOR FRAGMENT_NEARBY -->
+
+    <string name="explore">Explore</string>
+    <string name="home">Home</string>
+    <string name="about">About Museum</string>
+    <string name="info">Info</string>
+    <string name="wnew">What\'s new?</string>
+    <string name="near">Nearby Places</string>
+    <string name="contest">Photo Contest</string>
+    <string name="like">Like the Museum?</string>
+    <string name="rate">Rate Us</string>
+    <string name="support">Support Museum</string>
+    <string name="Info">Info</string>
+    <string name="engl">English</string>
+
 </resources>
 
 

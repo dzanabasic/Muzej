@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.dana.muzej.PhotoContestFragment">
+
+  <Button
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:id="@+id/b_gallery"
+  android:text="Gallery"/>
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/b_capture"
+      android:text="Upload photo"/>
+
+  <ImageView
+        android:layout_width="400dp"
+        android:layout_height="350dp"
+        android:id="@+id/iv_image"/>
+
+
+</LinearLayout>

@@ -12,7 +12,7 @@
 
         android:layout_width="350dp"
         android:layout_height="100dp"
-        android:text="EXPLORE"
+        android:text="@string/explore"
         android:id="@+id/explore"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
