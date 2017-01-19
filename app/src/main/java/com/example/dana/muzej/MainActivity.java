@@ -17,6 +17,14 @@ import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.dana.muzej.Fragments.AboutMuseumFragment;
+import com.example.dana.muzej.Fragments.HomeFragment;
+import com.example.dana.muzej.Fragments.InfoFragment;
+import com.example.dana.muzej.Fragments.NearbyFragment;
+import com.example.dana.muzej.Fragments.PhotoContestFragment;
+import com.example.dana.muzej.Fragments.RateFragment;
+import com.example.dana.muzej.Fragments.SupportUsFragment;
+
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
@@ -59,7 +67,6 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        DBHelper myDb=new DBHelper(this);
     }
 
 

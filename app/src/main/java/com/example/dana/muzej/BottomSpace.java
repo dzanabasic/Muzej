@@ -3,7 +3,7 @@ package com.example.dana.muzej;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
-import com.firebase.client.Firebase;
+//import com.firebase.client.Firebase;
 
 //import com.bumptech.glide.Glide;
 
