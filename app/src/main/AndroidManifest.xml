@@ -25,6 +25,12 @@
         <activity android:name=".LeftSpace" />
         <activity android:name=".RightSpace" />
         <activity android:name=".UpSpace" />
+        <activity android:name=".PreSpaces.PreUpSpace" />
+        <activity android:name=".PreSpaces.PreBottomSpace" />
+        <activity android:name=".PreSpaces.PreLeftSpace" />
+        <activity android:name=".PreSpaces.PreRightSpace" />
+
+
         <activity android:name=".BottomSpace"></activity>
     </application>
 

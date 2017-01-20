@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.dana.muzej.PreSpaces.PreBottomSpace;
+import com.example.dana.muzej.PreSpaces.PreLeftSpace;
+import com.example.dana.muzej.PreSpaces.PreRightSpace;
+import com.example.dana.muzej.PreSpaces.PreUpSpace;
+
 public class EntranceMain extends AppCompatActivity {
 
     @Override
@@ -21,7 +26,7 @@ public class EntranceMain extends AppCompatActivity {
         buttonLeft.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intLeft=new Intent(EntranceMain.this,LeftSpace.class);
+                Intent intLeft=new Intent(EntranceMain.this,PreLeftSpace.class);
                 startActivity(intLeft);
             }
 
@@ -33,7 +38,7 @@ public class EntranceMain extends AppCompatActivity {
         buttonRight.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intRight=new Intent(EntranceMain.this,RightSpace.class);
+                Intent intRight=new Intent(EntranceMain.this,PreRightSpace.class);
                 startActivity(intRight);
             }
 
@@ -44,7 +49,7 @@ public class EntranceMain extends AppCompatActivity {
         buttonUp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intUp=new Intent(EntranceMain.this,UpSpace.class);
+                Intent intUp=new Intent(EntranceMain.this,PreUpSpace.class);
                 startActivity(intUp);
             }
 
@@ -55,7 +60,7 @@ public class EntranceMain extends AppCompatActivity {
         buttonBottom.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intBottom=new Intent(EntranceMain.this,BottomSpace.class);
+                Intent intBottom=new Intent(EntranceMain.this,PreBottomSpace.class);
                 startActivity(intBottom);
             }
 
