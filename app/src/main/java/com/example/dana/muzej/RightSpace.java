@@ -1,42 +1,102 @@
 package com.example.dana.muzej;
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
-
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
+import com.example.dana.muzej.Helpers.Image;
+import com.example.dana.muzej.Helpers.ImageAdapter;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import java.util.ArrayList;
 
 
 
 public class RightSpace extends AppCompatActivity {
 
-    private TextView textViewPersons;
+    private static RightSpace instance = null;
+    final ArrayList<Image> ads = new ArrayList<Image>();
+    StaggeredGridLayoutManager mStaggeredLayoutManager;
+    RecyclerView mRecyclerView;
+    ImageAdapter mAdAdapter;
+    //  private Firebase mRootRef;
 
-    @Override
+
+    public static RightSpace getInstance() {
+        if (instance == null) {
+            instance = new RightSpace();
+        }
+        return instance;
+    }
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_right_space);
 
-//        android:name=".AppController"
+        initializePlaces();
+        //ArrayList<Image> ads;
 
-/* compile 'com.android.support:appcompat-v7:25.0.1'
-    compile 'com.android.support:design:25.0.1'
-    compile 'com.android.support:support-v4:25.0.1'
-    testCompile 'junit:junit:4.12'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-   // compile 'com.firebase:firebase-client-android:2.5.0'
-   // compile 'com.google.firebase:firebase-auth:9.2.1'
-   // compile 'com.google.firebase:firebase-core:9.2.1'
-    compile 'com.android.support:cardview-v7:25.0.+'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = database.getReference();
+        databaseReference.child("ImagesRigthSpace").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
 
-    compile 'com.android.support:multidex:1.0.1'
-    // RecyclerView
-    compile 'com.android.support:recyclerview-v7:25.0.1'
-    compile 'com.weiwangcn.betterspinner:library-material:1.1.0'
-    compile 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+                Iterable<DataSnapshot> children = dataSnapshot.getChildren();
+                for (DataSnapshot child : children) {
+                    Image r = child.getValue(Image.class);
+                    ads.add(r);
+
+                    mAdAdapter.notifyDataSetChanged();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
 
-    compile 'com.google.android.gms:play-services:9.2.1'*/
+        mAdAdapter = new ImageAdapter(ads);
+        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mStaggeredLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
+        mRecyclerView.setLayoutManager(mStaggeredLayoutManager);
+
+        mRecyclerView.setAdapter(mAdAdapter);
+
+
+    }
+
+    public void initializePlaces() {
+
+        ArrayList<Image> places = new ArrayList<>();
+        // Creating ads in database should be considered
+        places.add(new Image("https://firebasestorage.googleapis.com/v0/b/historijskimuzejbih-985c5.appspot.com/o/slike_eksponata%2Fagregat.jpg?alt=media&token=ff508a42-a524-4ff6-a494-65fdbede812c",
+                "Agregat",
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
+                        "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."));
+        places.add(new Image("https://firebasestorage.googleapis.com/v0/b/historijskimuzejbih-985c5.appspot.com/o/slike_eksponata%2Fvatrogasni_sljem.jpg?alt=media&token=375a4efd-349e-4820-b7cc-d488aa4a5068",
+                "Fire helmet",
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
+                        "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."));
+        places.add(new Image("https://firebasestorage.googleapis.com/v0/b/historijskimuzejbih-985c5.appspot.com/o/slike_eksponata%2Ftelefon.jpg?alt=media&token=2d586ef5-845c-4614-ba48-e719824a5277",
+                "Telephone",
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
+                        "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."));
+
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = database.getReference();
+        for (int i = 0; i < places.size(); i++) {
+            databaseReference.child("ImagesRigthSpace").push().setValue(places.get(i));
+        }
+
 
     }
 }
+
+

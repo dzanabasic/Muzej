@@ -23,9 +23,12 @@ public class ImageDetails extends AppCompatActivity {
         //Ad ad = (Ad) savedInstanceState.getSerializable("ad");
         ImageView imageView = (ImageView) findViewById(R.id.imageAdDetails);
         TextView textView = (TextView) findViewById(R.id.textAdDetails);
+        TextView textDesc = (TextView) findViewById(R.id.descriptionAdDetails);
+
         if (getIntent().hasExtra("ad")) {
             Image ad = (Image) getIntent().getSerializableExtra("ad");
             textView.setText(ad.name);
+            textDesc.setText(ad.AdDescription);
             Glide.with(imageView.getContext()).load(ad.image1).into(imageView);
         }
     }

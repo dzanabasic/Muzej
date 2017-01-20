@@ -13,10 +13,10 @@ public class Image implements Serializable {
     public  String image1;
     public String AdDescription;
 
-    public Image(String imageUrl, String name){
+    public Image(String imageUrl, String name, String AdDescription){
         this.image1=imageUrl;
         this.name=name;
-        AdDescription=null;
+        this.AdDescription=AdDescription;
     }
 
     public Image() {

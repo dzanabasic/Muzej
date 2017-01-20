@@ -47,12 +47,12 @@ public class LeftSpace extends AppCompatActivity {
         setContentView(R.layout.activity_left_space);
 
 
-        //initializePlaces();
+        initializePlaces();
         //ArrayList<Image> ads;
 
      FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = database.getReference();
-        databaseReference.child("Images").addValueEventListener(new ValueEventListener() {
+        databaseReference.child("ImagesLeftSpace").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
@@ -86,22 +86,28 @@ public class LeftSpace extends AppCompatActivity {
 
         ArrayList<Image> places = new ArrayList<>();
         // Creating ads in database should be considered
-        places.add(new Image("http://www.akta.ba/resources/Article/SmallImages/885b461e-5456-414f-9ae9-dd133bc0a3datoskana_mala.jpg", "Biss-Tours"));
-        places.add(new Image("http://www.centrotrans.com/uimages/drugislider/18102016_news_home.jpg", "Centrotrans"));
-        places.add(new Image("http://www.centrotrans.com/uimages/odrzavanje/zimskiredvoznje_ab1617_big.jpg", "Centrotrans"));
-        places.add(new Image("http://072info.com/wp-content/uploads/2014/04/BRATISLAVA-BEC-BUDIMPESTA-BISS-TOURS.jpg", "Biss-Tours"));
-        places.add(new Image("http://www.fksarajevo.ba/assets/uploads/articles/centrotrans-eurolines-se-ukljucuje-u-lbc-projekat-fk-sarajevo.jpg", "Centrotrans"));
-        places.add(new Image("http://www.akta.ba/resources/Article/SmallImages/91c97092-9326-4f48-8d65-6f53fbe27f34Spanija_Bisstours1.jpg", "Biss-Tours"));
+        places.add(new Image("http://www.akta.ba/resources/Article/SmallImages/885b461e-5456-414f-9ae9-dd133bc0a3datoskana_mala.jpg",
+                "Historical museum of Bosnia",
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
+                        "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."));
+        places.add(new Image("https://firebasestorage.googleapis.com/v0/b/historijskimuzejbih-985c5.appspot.com/o/slike_eksponata%2Fvatrogasni_sljem.jpg?alt=media&token=375a4efd-349e-4820-b7cc-d488aa4a5068",
+                "Fire helmet",
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
+                "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."));
+        places.add(new Image("https://firebasestorage.googleapis.com/v0/b/historijskimuzejbih-985c5.appspot.com/o/slike_eksponata%2Ftelefon.jpg?alt=media&token=2d586ef5-845c-4614-ba48-e719824a5277",
+                "Telephone",
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
+                        "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."));
+
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = database.getReference();
         for (int i = 0; i < places.size(); i++) {
-            databaseReference.child("Images").push().setValue(places.get(i));
+            databaseReference.child("ImagesLeftSpace").push().setValue(places.get(i));
         }
 
 
     }
-
     }
 
 
