@@ -36,7 +36,7 @@ public class BottomSpace extends AppCompatActivity {
         setContentView(R.layout.activity_right_space);
 
 
-        initializePlaces();
+        //initializePlaces();
         //ArrayList<Image> ads;
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();

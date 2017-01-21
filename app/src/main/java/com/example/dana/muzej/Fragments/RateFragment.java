@@ -8,8 +8,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RatingBar;
+import android.widget.Toast;
 
 import com.example.dana.muzej.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import static android.widget.Toast.LENGTH_LONG;
+import static com.example.dana.muzej.R.drawable.ratingbar_gold;
 
 
 /**
@@ -27,8 +35,24 @@ public class RateFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_rate, container, false);
+        View rootView =inflater.inflate(R.layout.fragment_rate, container, false);
+        final RatingBar mBar = (RatingBar) rootView.findViewById(R.id.ratingBar);
+        Button rate = (Button) rootView.findViewById(R.id.rate);
+        rate.setOnClickListener(new View.OnClickListener() {
+                                    public void onClick(View v) {
+                                        float rate=mBar.getRating();
+                                        Toast toast = Toast.makeText(getActivity(), "Your rate is "+rate,LENGTH_LONG);
+                                        toast.show();
+
+                                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                        DatabaseReference databaseReference = database.getReference();
+                                        databaseReference.child("AppRating").push().setValue(rate);
+
+
+                                    }
+                                });
+
+        return rootView;
     }
 
     public void onButtonPressed(Uri uri) {

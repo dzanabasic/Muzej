@@ -24,6 +24,7 @@ import com.example.dana.muzej.Fragments.NearbyFragment;
 import com.example.dana.muzej.Fragments.PhotoContestFragment;
 import com.example.dana.muzej.Fragments.RateFragment;
 import com.example.dana.muzej.Fragments.SupportUsFragment;
+import com.example.dana.muzej.Fragments.Whatsnew;
 
 import java.util.Locale;
 
@@ -152,6 +153,13 @@ public class MainActivity extends AppCompatActivity
             FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
             NearbyFragment nearbyFragment=new NearbyFragment();
             fragmentTransaction.replace(R.id.fragment_container,nearbyFragment);
+            fragmentTransaction.commit();
+
+        } else if (id == R.id.nav_news) {
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+            Whatsnew news=new Whatsnew();
+            fragmentTransaction.replace(R.id.fragment_container,news);
             fragmentTransaction.commit();
 
         } else if (id == R.id.nav_photocontest) {

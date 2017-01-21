@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/layout_color"
-    tools:context="com.example.dana.muzej.SupportUsFragment">
+    tools:context="com.example.dana.muzej.Fragments.SupportUsFragment">
 
     <ImageView
         android:layout_width="120dp"

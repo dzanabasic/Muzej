@@ -1,16 +1,8 @@
 package com.example.dana.muzej;
-
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
-
 import com.example.dana.muzej.Helpers.Image;
 import com.example.dana.muzej.Helpers.ImageAdapter;
 import com.google.firebase.database.DataSnapshot;
@@ -47,7 +39,7 @@ public class LeftSpace extends AppCompatActivity {
         setContentView(R.layout.activity_left_space);
 
 
-        initializePlaces();
+        //initializePlaces();
         //ArrayList<Image> ads;
 
      FirebaseDatabase database = FirebaseDatabase.getInstance();

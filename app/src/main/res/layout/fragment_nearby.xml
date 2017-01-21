@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/layout_color"
-    tools:context="com.example.dana.muzej.NearbyFragment">
+    tools:context="com.example.dana.muzej.Fragments.NearbyFragment">
 
     <ScrollView
         android:layout_width="match_parent"

@@ -29,6 +29,7 @@
         <activity android:name=".PreSpaces.PreBottomSpace" />
         <activity android:name=".PreSpaces.PreLeftSpace" />
         <activity android:name=".PreSpaces.PreRightSpace" />
+        <activity android:name=".ViewHolders.NewsDetails" />
 
 
         <activity android:name=".BottomSpace"></activity>

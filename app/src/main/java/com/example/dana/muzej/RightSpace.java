@@ -36,7 +36,7 @@ public class RightSpace extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_right_space);
 
-        initializePlaces();
+       // initializePlaces();
         //ArrayList<Image> ads;
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
