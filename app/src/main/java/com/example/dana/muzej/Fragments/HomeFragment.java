@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         context = rootView.getContext(); // Assign your rootView to context
 
-        ImageButton buttonExplore = (ImageButton) rootView.findViewById(R.id.explore);
+        Button buttonExplore = (Button) rootView.findViewById(R.id.explore);
         buttonExplore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

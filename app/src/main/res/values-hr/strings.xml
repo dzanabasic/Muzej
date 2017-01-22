@@ -50,4 +50,8 @@
     <string name="bos">Bosanski</string>
     <string name="engl">Engleski</string>
     <string name="info">Info</string>
+    <string name="db">DRUGI SVIJETSKI RAT</string>
+    <string name="rb">SUVENIRI</string>
+    <string name="ub">GALERIJA OPKOLJENOG SARAJEVA</string>
+    <string name="lb">DJECA I RAT</string>
 </resources>

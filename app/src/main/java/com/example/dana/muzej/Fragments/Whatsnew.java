@@ -50,7 +50,7 @@ public class Whatsnew extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView=inflater.inflate(R.layout.fragment_whatsnew, container, false);
-        initializePlaces();
+       // initializePlaces();
 
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();

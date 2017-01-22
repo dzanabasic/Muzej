@@ -142,7 +142,7 @@
 
     <!-- STRINGS FOR FRAGMENT_NEARBY -->
 
-    <string name="naslov">Must sees</string>
+    <string name="naslov">Nearby Places</string>
     <string name="txt1">National Museum\nZmaja od Bosne 3</string>
     <string name="txt2">National Thatre\nObala Kulina bana 9</string>
     <string name="txt3">Vijecnica\nObala Kulina bana</string>
@@ -165,6 +165,13 @@
     <string name="support">Support Museum</string>
     <string name="Info">Info</string>
     <string name="engl">English</string>
+
+    <!-- BUTTONS -->
+
+    <string name="rb">SOUVENIR SHOP</string>
+    <string name="lb">CHILDREN AND WAR</string>
+    <string name="ub">SEIGE OF SARAJEVO</string>
+    <string name="db">WORLD WAR II GALLERY</string>
 
 </resources>
 

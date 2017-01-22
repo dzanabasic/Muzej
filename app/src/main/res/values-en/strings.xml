@@ -139,7 +139,7 @@
 
     <!-- STRINGS FOR FRAGMENT_NEARBY -->
 
-    <string name="naslov">Must sees</string>
+    <string name="naslov">Nearby Places</string>
     <string-array name="place_names">
         <item>Sebilj</item>
         <item>Sarajevo National Theater</item>

@@ -8,42 +8,48 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    tools:showIn="@layout/app_bar_main"
     tools:context="com.example.dana.muzej.ViewHolders.NewsDetails">
-
-    <LinearLayout
-        android:id="@+id/mainLinearLayout"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:orientation="vertical">
-
-        <TextView
-            android:textSize="20sp"
-            android:layout_above="@+id/imageAdDetails"
-            android:id="@+id/textAdDetails"
-            android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/mainLinearLayout"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_marginTop="6dp"
-            android:textColor="@android:color/black"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
-            android:id="@+id/imageAdDetails"
-            />
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
             <TextView
-                android:text="Description"
-                android:id="@+id/descriptionAdDetails"
+                android:textSize="20sp"
+                android:layout_above="@+id/imageAdDetails"
+                android:id="@+id/textAdDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="2dp"
                 android:textColor="@android:color/black"/>
-        </ScrollView>
-    </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="3dp"
+                android:id="@+id/imageAdDetails"
+                />
+
+                <TextView
+                    android:text="Description"
+                    android:id="@+id/descriptionAdDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:gravity="center_horizontal"
+                    style="@style/CodeFont"
+                    android:textSize="15dp"
+                    />
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

@@ -4,9 +4,10 @@
     android:id="@+id/activity_entrance_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="@drawable/entrance_back"
-    tools:context="com.example.dana.muzej.EntranceMain">
+    tools:context="com.example.dana.muzej.EntranceMain"
+    tools:showIn="@layout/app_bar_main"
+    >
 
     <Button
         android:layout_width="75dp"

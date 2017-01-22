@@ -28,4 +28,9 @@
     <string name="naslov">Posjetite još...</string>
     <string name="hello_blank_fragment"></string>
     <string name="action_settings">Podešavanja</string>
+    <string name="ub">GALERIJA OPKOLJENOG SARAJEVA</string>
+    <string name="txt6">Bijela Tabija</string>
+    <string name="rb">SUVENIRI</string>
+    <string name="lb">DJECA I RAT</string>
+    <string name="db">DRUGI SVIJETSKI RAT</string>
 </resources>
