@@ -21,7 +21,6 @@ import com.example.dana.muzej.Fragments.AboutMuseumFragment;
 import com.example.dana.muzej.Fragments.HomeFragment;
 import com.example.dana.muzej.Fragments.InfoFragment;
 import com.example.dana.muzej.Fragments.NearbyFragment;
-import com.example.dana.muzej.Fragments.PhotoContestFragment;
 import com.example.dana.muzej.Fragments.RateFragment;
 import com.example.dana.muzej.Fragments.SupportUsFragment;
 import com.example.dana.muzej.Fragments.Whatsnew;
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         HomeFragment.OnFragmentInteractionListener,
         NearbyFragment.OnFragmentInteractionListener,
-        PhotoContestFragment.OnFragmentInteractionListener,
         SupportUsFragment.OnFragmentInteractionListener,
         InfoFragment.OnFragmentInteractionListener,
         RateFragment.OnFragmentInteractionListener
@@ -162,15 +160,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container,news);
             fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_photocontest) {
-
-            FragmentManager fragmentManager=getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-            PhotoContestFragment photoContestFragment=new PhotoContestFragment();
-            fragmentTransaction.replace(R.id.fragment_container,photoContestFragment);
-            fragmentTransaction.commit();
-
-        } else if (id == R.id.nav_rate) {
+        }  else if (id == R.id.nav_rate) {
             FragmentManager fragmentManager=getSupportFragmentManager();
             FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
             RateFragment rateFragment=new RateFragment();

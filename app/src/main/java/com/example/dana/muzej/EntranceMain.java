@@ -6,10 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.dana.muzej.PreSpaces.PreBottomSpace;
-import com.example.dana.muzej.PreSpaces.PreLeftSpace;
-import com.example.dana.muzej.PreSpaces.PreRightSpace;
-import com.example.dana.muzej.PreSpaces.PreUpSpace;
 
 public class EntranceMain extends AppCompatActivity {
 
@@ -18,15 +14,24 @@ public class EntranceMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entrance_main);
 
-        Button buttonLeft=(Button)findViewById(R.id.leftbutton);
-        Button buttonRight=(Button)findViewById(R.id.rightbutton);
-        Button buttonUp=(Button)findViewById(R.id.upButton);
-        Button buttonBottom=(Button)findViewById(R.id.bottomButton);
+        Button buttonLeft=(Button)findViewById(R.id.buttonLeftSpace);
 
         buttonLeft.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intLeft=new Intent(EntranceMain.this,PreLeftSpace.class);
+                Intent intLeft=new Intent(EntranceMain.this,LeftSpace.class);
+                startActivity(intLeft);
+            }
+
+
+        });
+
+        Button buttonRight=(Button)findViewById(R.id.buttonRightSpace);
+
+        buttonRight.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intLeft=new Intent(EntranceMain.this,RightSpace.class);
                 startActivity(intLeft);
             }
 
@@ -34,37 +39,30 @@ public class EntranceMain extends AppCompatActivity {
         });
 
 
-
-        buttonRight.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intRight=new Intent(EntranceMain.this,PreRightSpace.class);
-                startActivity(intRight);
-            }
-
-
-        });
-
+        Button buttonUp=(Button)findViewById(R.id.buttonUpSpace);
 
         buttonUp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intUp=new Intent(EntranceMain.this,PreUpSpace.class);
-                startActivity(intUp);
+                Intent intLeft=new Intent(EntranceMain.this,UpSpace.class);
+                startActivity(intLeft);
             }
 
 
         });
 
+        Button buttonBottom=(Button)findViewById(R.id.buttonBottomSpace);
 
         buttonBottom.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intBottom=new Intent(EntranceMain.this,PreBottomSpace.class);
-                startActivity(intBottom);
+                Intent intLeft=new Intent(EntranceMain.this,BottomSpace.class);
+                startActivity(intLeft);
             }
 
 
         });
+
+
     }
 }
